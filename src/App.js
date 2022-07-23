@@ -1,23 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import TravelPack from './components/TravelPack';
+import Travels from './components/Travels';
 
 function App() {
+  const travels =[
+    {
+      id: 't1',
+      place: 'Germany',
+      period: '15 days',
+      description:"Let's explore Germany together!",
+      price: 1000
+
+    },
+    {
+      id: 't2',
+      place: 'California',
+      period: '21 days',
+      description:"Wanna hang around the beautiful beaches?",
+      price: 2000
+    },
+    {
+      id: 't3',
+      place: 'London',
+      period: '10 days',
+      description:"You'll love the set of Harry Potter!",
+      price: 3000
+    }
+  ]
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <Travels items={travels}></Travels>  
     </div>
   );
 }
